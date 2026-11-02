@@ -1,3 +1,4 @@
 {
-  "storage": "memory"
+  "storage": "json",
+  "dataFile": "data/transactions.json"
 }
