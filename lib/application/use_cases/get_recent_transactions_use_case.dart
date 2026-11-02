@@ -8,6 +8,9 @@ class GetRecentTransactionsUseCase {
   GetRecentTransactionsUseCase(this.repository);
 
   List<Transaction> execute(int limit) {
+        if (limit <= 0) {
+      throw ArgumentError('Ліміт має бути більшим за нуль');
+    }
     final all = List<Transaction>.from(repository.getAll());
     all.sort((a, b) => b.date.compareTo(a.date));
     if (all.length > limit) {
