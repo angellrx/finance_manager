@@ -44,7 +44,12 @@ class JsonTransactionRepository implements TransactionRepository {
     if (text.trim().isEmpty) {
       return [];
     }
-    final list = jsonDecode(text) as List;
+       List list;
+    try {
+      list = jsonDecode(text) as List;
+    } on FormatException {
+      throw Exception('Файл $filePath пошкоджено: некоректний JSON');
+    }
     final result = <Transaction>[];
     for (final item in list) {
       result.add(Transaction(
