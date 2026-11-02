@@ -111,6 +111,12 @@ class DashboardCli {
       return;
     }
 
+    final answer = _ask('Видалити "${items[number - 1].title}"? (y/n): ');
+    if (answer != 'y') {
+      print('Скасовано.');
+      return;
+    }
+    
     final removed = deleteTransaction.execute(items[number - 1].id);
     if (removed) {
       print('Видалено.');
