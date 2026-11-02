@@ -1,3 +1,4 @@
 {
-  "storage": "memory"
+  "storage": "memory",
+  "currency": "₴"
 }
