@@ -42,7 +42,7 @@ lib/presentation/cli/               консольний інтерфейс
 Потрібен Dart SDK 3.0 або новіший (входить до складу Flutter).
 
 ```
-git clone https://github.com/ТВІЙ_ЛОГІН/finance_manager.git
+git clone https://github.com/angellrx/finance_manager.git
 cd finance_manager
 dart run bin/finance_manager.dart
 ```
